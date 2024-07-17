@@ -1,0 +1,5 @@
+CXX = g++
+CXXFlags = -DOPTION_1
+Target = m3
+$(Target):
+	$(CXX)  $(CXXFlags)    main.cpp func.cpp func2.cpp -o  m3.exe

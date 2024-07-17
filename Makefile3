@@ -1,0 +1,19 @@
+CXX = g++
+CXXFlags = -DOPTION_1
+CXXFlags2 = -Wall -g
+Sour_Pro1 = main.cpp func.cpp func2.cpp
+Target = Pro1 Pro2
+
+all:$(Target)
+
+Pro1:$(Sour_Pro1)
+	$(CXX)  $(CXXFlags)    $(Sour_Pro1) -o  Pro1
+
+Pro2:main2.cpp
+	$(CXX)  $(CXXFlags) $(CXXFlags2) main2.cpp -o Pro2
+
+.PHONY: all clean
+
+
+clean:
+	rm -f $(Target)

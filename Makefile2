@@ -1,0 +1,12 @@
+CXX = g++
+CXXFlags = -DOPTION_1
+Sources = main.cpp func.cpp func2.cpp
+Target = m4.exe
+$(Target):
+	$(CXX)  $(CXXFlags)    $(Sources) -o  $(Target)
+
+.PHONY: all clean
+
+
+clean:
+	rm -f $(TARGET)
